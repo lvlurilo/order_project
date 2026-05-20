@@ -53,24 +53,3 @@ DELETE /orders/{orderId}/items/{itemId}
 
 GET /orders/{orderId}
     Retorna o resumo do pedido com valor total calculado e desconto aplicado
-
-
-
-# Contexto
-Você deve implementar uma pequena API para gerenciar pedidos de uma loja online. O sistema deve permitir:
- - Criar um pedido com itens (produto, quantidade, preço unitário)
- - Calcular o valor total do pedido aplicando o desconto correto para o tipo do pedido
- - Atualizar a quantidade de um item no pedido
- - Remover um item do pedido
- - Obter o resumo do pedido (itens + valor total com desconto aplicado)
-
- ## Tipos de pedido e regras de desconto
-Cada pedido possui um tipo que determina como o valor total é calculado:
-
-| Tipo | Regra |
-|---|---|
-| `standard` | Sem desconto |
-| `express` | Acréscimo de 15% (taxa de entrega rápida) |
-| `subscription` | Desconto de 10% (cliente assinante) |
-
-O valor total deve sempre refletir a regra do tipo do pedido.
